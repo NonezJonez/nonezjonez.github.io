@@ -3,6 +3,7 @@ layout: page
 title: Scheda d'appalto interno - AGFO
 date: 2025-07-29T16:15:00.000+02:00
 permalink: /amministrazione/trasparenza/appalti/agfo1/
+argomento: dirigenza
 ---
 Scheda di Appalto per la Gestione del Sito Web di AGFO
 Oggetto: Affidamento della gestione del sito web di Arena Giovani – Friuli Occidentale (AGFO) a GJWS

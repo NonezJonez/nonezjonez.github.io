@@ -5,6 +5,8 @@ date: 2025-08-11T23:47:00.000+02:00
 permalink: /aree/2/
 categoria: area1
 categories: educazione
+img: https://udgj.it/assets/base.png
+argomento: edu
 ---
 L’Area 2 dell’Ufficio Digitale raccoglie tutte le attività dedicate alla crescita educativa e formativa di bambini, ragazzi e famiglie.
 Qui si sviluppano progetti e servizi che uniscono apprendimento, creatività e socialità, con particolare attenzione all’inclusione e al benessere della comunità.

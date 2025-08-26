@@ -7,6 +7,8 @@ image: https://ufficiogabrieljones.it/assets/base.png
 categories: none
 persone_correlate:
   - gabriel-jones
+img: https://udgj.it/assets/base.png
+argomento: cultura
 ---
 ## Accento Civico  –  Il progetto di una nuova cittadinanza attiva
 

@@ -6,6 +6,7 @@ permalink: /upid/
 categories: progetti
 persone_correlate:
   - gabriel-jones
+argomento: edu
 ---
 # **UPID - Più forte di sempre**
 

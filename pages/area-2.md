@@ -4,6 +4,8 @@ title: Area 1 – Affari Istituzionali e Biblioteconomia
 date: 2025-08-11T23:47:00.000+02:00
 permalink: /aree/1/
 categories: educazione
+img: https://udgj.it/assets/base.png
+argomento: politica
 ---
 L’Area 1 dell’Ufficio Digitale si occupa di due ambiti strettamente connessi:
 

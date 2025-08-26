@@ -3,6 +3,7 @@ layout: page
 title: Arena Giovani
 date: 2025-02-01T12:12:00.000+01:00
 permalink: /agfo/
+argomento: dirigenza
 ---
 ## Arena Giovani - un progetto civico
 

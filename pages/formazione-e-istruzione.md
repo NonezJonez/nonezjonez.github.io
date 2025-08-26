@@ -7,7 +7,8 @@ profilo_id: gabriel-jones
 categoria: educazione
 image: /assets/base.png
 categories: "[area1]"
-categories: educazione
+img: https://udgj.it/assets/base.png
+argomento: edu
 ---
 
 Questa pagina raccoglie tutti gli articoli, le pagine e i materiali legati alle attività dedicate ai bambini dell’asilo e della scuola primaria, organizzate con l’associazione Mangia Libri ODV, l’oratorio e il grest.

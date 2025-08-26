@@ -3,6 +3,7 @@ layout: page
 title: Twitter
 date: 2025-08-08T21:45:00.000+02:00
 permalink: /twitter/
+argomento: dirigenza
 ---
 # Informativa sulla gestione dei profili social su X (Twitter)
 

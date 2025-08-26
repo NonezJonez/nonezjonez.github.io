@@ -4,6 +4,7 @@ title: Oratorio 2025-26
 date: 2025-08-10T20:11:00.000+02:00
 permalink: /fi25/oratorio/
 categories: educazione
+argomento: edu
 ---
 ## Oratorio 2025-26
 

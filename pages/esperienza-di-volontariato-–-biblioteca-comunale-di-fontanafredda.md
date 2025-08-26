@@ -5,6 +5,7 @@ date: 2025-08-12T21:58:00.000+02:00
 permalink: /biblioteca/
 image: https://www.massimocuomo.com/wp-content/uploads/2024/10/biblioteca_fontanafredda_vigonovo.jpg
 categories: educazione
+argomento: edu
 ---
 Il mio percorso di volontariato presso la **Biblioteca Comunale di Fontanafredda** si è svolto durante il periodo di gestione affidato alla **ditta Ascaretto**.\
 In questo contesto, ho avuto l’opportunità di collaborare a stretto contatto con **Lucia Bassan**, figura di riferimento per le attività bibliotecarie, partecipando attivamente alla vita culturale della comunità.

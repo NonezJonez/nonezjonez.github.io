@@ -3,6 +3,7 @@ layout: page
 title: Segreteria
 date: 2025-07-19T10:02:00.000+02:00
 permalink: /amministrazione/segreteria/
+argomento: dirigenza
 ---
 # Segreterie Attive
 

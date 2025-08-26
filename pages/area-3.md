@@ -5,6 +5,8 @@ date: 2025-08-11T23:50:00.000+02:00
 permalink: /aree/3/
 categoria: area3
 categories: area3
+img: https://udgj.it/assets/base.png
+argomento: gjws
 ---
 ## Area 3 – Servizi Informatici e Progetti *Accento Civico*
 
