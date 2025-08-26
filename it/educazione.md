@@ -7,6 +7,7 @@ ref: homepage
 permalink: /dipartimenti/educativo/
 order: 1
 argomento: edu
+categories: educazione
 ---
 
 {% include heroedu.html %}
