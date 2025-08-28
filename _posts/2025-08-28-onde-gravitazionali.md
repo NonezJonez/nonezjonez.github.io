@@ -3,17 +3,18 @@ layout: article
 title: "Onde gravitazionali: la prima volta di Ligo"
 subtitle: "Tutti i segreti della scoperta che cambierà il modo di 'leggere' l’Universo"
 author:
-  name: "Claudia Grisanti"
-  role: "Fisica - Direttrice del CERN"
+  name: "Gabriel Jones"
+  role: "Gabriel Jones"
   image: "/assets/placeholders/img-avatar-250x250.png"
 category: "Novità"
-comments_count: 344
+comments_count: 0
 header_image: "/assets/placeholders/placeholder-1280x960.jpg"
 related_posts:
   - title: "Svelato il mistero dei 'barioni nascosti'"
     url: "/posts/barioni-nascosti"
     excerpt: "Un team di ricercatori dell'INAF è riuscito ad individuare la materia ordinaria mancante dell’Universo."
 ---
+
 Oggi è stata annunciata la scoperta delle onde gravitazionali. Per scoprirle, il team di [LIGO (Laser Interferometer Gravitational-Wave Observatory)](https://www.ligo.caltech.edu/) ha costruito due rilevatori: uno a Livingston, in Louisiana, l’altro a Hanford, Washington. I ricercatori sono risaliti all’evento che ha generato le onde gravitazionali, tramite l’analisi del segnale durato appena una frazione di secondi.
 
 > …sarebbe stato il movimento a spirale sempre più veloce di due buchi neri fino alla collisione e alla fusione. I ricercatori hanno calcolato che i buchi neri avevano una massa pari a circa 29 e 36 volte quella del Sole e si trovavano a 1,3 miliardi di anni luce di distanza dalla Terra. Sono stati fatti controlli per eliminare la possibilità di errori, ma i segnali misurati corrispondono alle previsioni sulle onde gravitazionali.
