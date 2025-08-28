@@ -1,93 +1,150 @@
----
-layout: default
----
+  <main id="main-container" class="main-container">
 
-<main id="main-container" class="main-container greendark">
-
-  <!-- Breadcrumb -->
-  <section class="section py-2 bg-white d-none d-sm-block">
-    <div class="container">
-      <div class="row variable-gutters">
-        <div class="col-12">
-          <div class="breadcrumb">
+    <!-- Breadcrumb -->
+    <section class="section py-2 bg-white d-none d-sm-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
             <nav aria-label="breadcrumb">
-              <ol class="breadcrumbs-list" data-element="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ site.baseurl }}/" title="Vai alla pagina: Home">Home</a></li>
-                {% if page.category %}
-                  <li class="breadcrumb-item"><a href="{{ site.baseurl }}/categories/{{ page.category | downcase }}">{{ page.category }}</a></li>
-                {% endif %}
-                <li class="breadcrumb-item active" aria-current="page">
-                  <span>{{ page.title }}</span>
-                </li>
+              <ol class="breadcrumbs-list">
+                <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ '/novita/' | relative_url }}">Novità</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
               </ol>
             </nav>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Article Title & Author -->
-  <section class="section bg-white article-title article-title-author">
-    <div class="title-img" style="background-image: url('{{ page.header_image | default: '/assets/placeholders/placeholder-1280x960.jpg' }}');"></div>
-    <div class="container">
-      <div class="row variable-gutters">
-        <div class="col-md-6 article-title-author-container">
-          <div class="title-content">
-            <h1>{{ page.title }}</h1>
-            <p class="mb-0">{{ page.subtitle }}</p>
-          </div>
-          <div class="card card-avatar card-comments">
-            <div class="card-body p-0">
-              <div class="card-avatar-img">
-                <img src="{{ page.author.image | default: '/assets/placeholders/img-avatar-250x250.png' }}" alt="Immagine profilo">
-              </div>
-              <div class="card-avatar-content">
-                <p class="font-weight-normal">da <strong class="text-underline"><u>{{ page.author.name }}</u></strong></p>
-                <small>{{ page.author.role }}</small>
-              </div>
-              {% if page.comments_count %}
-              <div class="comments ml-auto">
-                <p>{{ page.comments_count }}</p>
-              </div>
+    <!-- Article Header -->
+    <section class="section bg-white article-title article-title-author">
+      {% if page.header_image %}
+      <div class="title-img" style="background-image: url('{{ page.header_image }}');"></div>
+      {% endif %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 article-title-author-container">
+            <div class="title-content">
+              <h1>{{ page.title }}</h1>
+              {% if page.subtitle %}
+              <p>{{ page.subtitle }}</p>
               {% endif %}
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Article Content -->
-  <section class="section bg-white pt-5">
-    <div class="container">
-      <div class="row variable-gutters">
-        <div class="col-lg-9 col-md-8 order-lg-1">
-          <article class="article-wrapper pt-4">
-            {{ content }}
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Related Content -->
-  <section class="section bg-gray-gradient py-5">
-    <div class="container pt-3">
-      <div class="row variable-gutters">
-        <div class="col-lg-12">
-          <h2 class="h3 mb-5 text-center semi-bold text-gray-primary">Contenuti correlati</h2>
-          {% for related in page.related_posts %}
-          <div class="card card-bg card-vertical-thumb bg-white card-thumb-rounded mb-3">
-            <div class="card-body">
-              <h3 class="h5"><a href="{{ related.url }}">{{ related.title }}</a></h3>
-              <p>{{ related.excerpt }}</p>
+            <!-- Author Card -->
+            <div class="card card-avatar card-comments">
+              <div class="card-body p-0">
+                <div class="card-avatar-img">
+                  <img src="{{ page.author.image }}" alt="Immagine profilo">
+                </div>
+                <div class="card-avatar-content">
+                  <p>da <strong>{{ page.author.name }}</strong></p>
+                  <small>{{ page.author.role }}</small>
+                </div>
+                <div class="comments ml-auto">
+                  <p>{{ page.comments_count }}</p>
+                </div>
+              </div>
             </div>
+
           </div>
-          {% endfor %}
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+    <!-- Article Content + Sidebar -->
+    <section class="section bg-white pt-5">
+      <div class="container">
+        <div class="row">
+
+          <!-- Main Content -->
+          <div class="col-lg-9 col-md-8 order-lg-1">
+            <article class="article-wrapper pt-4">
+              {{ content }}
+            </article>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-3 col-md-4 order-lg-0">
+            <!-- Actions -->
+            <div class="actions-wrapper actions-main">
+              <a class="toggle-actions" href="#" data-target="#modal-more-items" data-toggle="modal">
+                <span>Stampa / Condividi</span>
+              </a>
+              <div class="modal fade modal-actions" id="modal-more-items" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <ul class="link-list">
+                        <li><a href="#" class="list-item">Stampa</a></li>
+                        <li><a href="#" class="list-item">Invia</a></li>
+                        <li>
+                          <a class="list-item collapsed" role="button" href="#social-share" data-toggle="collapse">Condividi</a>
+                          <ul class="link-sublist collapse" id="social-share">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Badge Topics -->
+            <aside class="badges-wrapper badges-main">
+              <h2 class="h4">Argomenti</h2>
+              <div class="badges">
+                {% for topic in page.topics %}
+                <a href="#" class="badge badge-sm badge-pill badge-outline-greendark">{{ topic }}</a>
+                {% endfor %}
+              </div>
+            </aside>
+
+            <!-- People -->
+            <div class="cards-aside mt-4">
+              <h2 class="h4">Le persone</h2>
+              {% for person in page.people %}
+              <div class="card card-avatar card-comments">
+                <a href="#">
+                  <div class="card-body p-0">
+                    <div class="card-avatar-img">
+                      <img src="{{ person.image }}" alt="Immagine profilo">
+                    </div>
+                    <div class="card-avatar-content">
+                      <p class="font-weight-normal"><strong>{{ person.name }}</strong></p>
+                      <small>{{ person.role }}</small>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+
+            <!-- Places -->
+            <div class="cards-aside mt-4">
+              <h2 class="h4">Luoghi</h2>
+              {% for place in page.places %}
+              <div class="card card-icon-main">
+                <a href="#">
+                  <div class="card-body p-0">
+                    <svg class="icon" width="100%" height="100%"><!-- SVG placeholder --></svg>
+                    <div class="card-icon-content">
+                      <p><strong>{{ place }}</strong></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              {% endfor %}
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
