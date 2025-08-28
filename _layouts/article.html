@@ -1,115 +1,141 @@
 ---
 layout: default
 ---
-<main id="main-container" class="main-container">
+<main id="main-container" class="main-container greendark">
 
-    <!-- Breadcrumb -->
-    <section class="section py-2 bg-white d-none d-sm-block">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumbs-list">
-                <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{{ '/novita/' | relative_url }}">Novità</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section class="section py-2 bg-white d-none d-sm-block">
+        <div class="container">
+          <div class="row variable-gutters">
+            <div class="col-12">
+              <div class="breadcrumb">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumbs-list" data-element="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/" title="Vai alla pagina: Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/notizie/" title="Vai alla pagina: Notizie">Notizie</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><span> {{ page.title }} </span></li>
+                  </ol>
+                </nav>
+              </div><!-- /breadcrumbs -->
+            </div><!-- /col-12 -->
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </section><!-- /section -->
 
-    <!-- Article Header -->
-    <section class="section bg-white article-title article-title-author">
-      {% if page.header_image %}
-      <div class="title-img" style="background-image: url('{{ page.header_image }}');"></div>
-      {% endif %}
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 article-title-author-container">
-            <div class="title-content">
-              <h1>{{ page.title }}</h1>
-              {% if page.subtitle %}
-              <p>{{ page.subtitle }}</p>
-              {% endif %}
-            </div>
 
-            <!-- Author Card -->
-            <div class="card card-avatar card-comments">
-              <div class="card-body p-0">
-                <div class="card-avatar-img">
-                  <img src="{{ page.author.image }}" alt="Immagine profilo">
-                </div>
-                <div class="card-avatar-content">
-                  <p>da <strong>{{ page.author.name }}</strong></p>
-                  <small>{{ page.author.role }}</small>
-                </div>
-                <div class="comments ml-auto">
-                  <p>{{ page.comments_count }}</p>
-                </div>
-              </div>
-            </div>
+      <section class="section bg-white article-title article-title-author">
+        <div class="title-img" style="background-image: url('assets/placeholders/placeholder-1280x960.jpg');"></div>
+        <div class="container">
+          <div class="row variable-gutters">
+            <div class="col-md-6 article-title-author-container">
+              <div class="title-content">
+                <h1>{{ page.title }}</h1>
+                <p class="mb-0">{{ page.intro }}</p>
+              </div><!-- /title-content -->
+              <div class="card card-avatar card-comments">
+                <div class="card-body p-0">
+                  <div class="card-avatar-img">
+                    <img src="assets/placeholders/img-avatar-250x250.png" alt="Immagine profilo">
+                  </div><!-- /card-avatar-img -->
+                  <div class="card-avatar-content">
+                    <p class="font-weight-normal">da <strong class="text-underline"><u>{{ page.author }}</u></strong></p>
+                    <small>Amministratore</small>
+                  </div><!-- /card-avatar-content -->
+                </div><!-- /card-body -->
+              </div><!-- /card card-avatar -->
+            </div><!-- /col-md-6 -->
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </section><!-- /section -->
 
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Article Content + Sidebar -->
-    <section class="section bg-white pt-5">
-      <div class="container">
-        <div class="row">
-
-          <!-- Main Content -->
-          <div class="col-lg-9 col-md-8 order-lg-1">
-            <article class="article-wrapper pt-4">
-              {{ content }}
-            </article>
-          </div>
-
-          <!-- Sidebar -->
-          <div class="col-lg-3 col-md-4 order-lg-0">
-            <!-- Actions -->
-            <div class="actions-wrapper actions-main">
-              <a class="toggle-actions" href="#" data-target="#modal-more-items" data-toggle="modal">
-                <span>Stampa / Condividi</span>
-              </a>
-              <div class="modal fade modal-actions" id="modal-more-items" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <ul class="link-list">
-                        <li><a href="#" class="list-item">Stampa</a></li>
-                        <li><a href="#" class="list-item">Invia</a></li>
-                        <li>
-                          <a class="list-item collapsed" role="button" href="#social-share" data-toggle="collapse">Condividi</a>
-                          <ul class="link-sublist collapse" id="social-share">
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Linkedin</a></li>
+      <section class="section bg-white pt-5">
+        <div class="container">
+          <div class="row variable-gutters">
+            <div class="col-lg-9 col-md-8 order-lg-1">
+              <article class="article-wrapper pt-4">
+                  {{ content }}
+              </article>
+            </div><!-- /col-lg-8 -->
+            <div class="col-lg-3 col-md-4 order-lg-0">
+              <div class="actions-wrapper actions-main">
+                <a class="toggle-actions" href="#" title="Vedi azioni" data-target="#modal-more-items" data-toggle="modal">
+                  <svg class="it-more-items">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-more-items"></use>
+                  </svg>
+                  <span>Stampa / Condividi</span>
+                </a>
+                <div class="modal fade modal-actions" id="modal-more-items" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li>
+                              <a href="#" class="list-item left-icon" title="Stampa il contenuto">
+                                <svg class="icon it-print">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-print"></use>
+                                </svg>
+                                <span>Stampa</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="list-item left-icon" title="Invia il contenuto">
+                                <svg class="icon it-email">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-email"></use>
+                                </svg>
+                                <span>Invia</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item collapsed link-toggle" role="button" title="Menu Condividi" href="#social-share" data-toggle="collapse" aria-expanded="false" aria-controls="social-share" id="share-control">
+                                <svg class="icon it-share">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-share"></use>
+                                </svg>
+                                <span>Condividi</span>
+                                <svg class="icon icon-toggle svg-arrow-down-small">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-down-small">
+                                  </use>
+                                </svg>
+                              </a>
+                              <ul class="link-sublist collapse" id="social-share" role="region" aria-labelledby="share-control">
+                                <li>
+                                  <a class="list-item" href="#" title="Condividi su: Facebook">
+                                    <svg class="icon it-social-facebook">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-social-facebook">
+                                      </use>
+                                    </svg>
+                                    <span>Facebook</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="list-item" href="#" title="Condividi su: Twitter">
+                                    <svg class="icon it-social-twitter">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-social-twitter">
+                                      </use>
+                                    </svg>
+                                    <span>Twitter</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="list-item" href="#" title="Condividi su: Linkedin">
+                                    <svg class="icon it-social-linkedin">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-social-linkedin">
+                                      </use>
+                                    </svg>
+                                    <span>Linkedin</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
                           </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                        </div>
+                      </div><!-- /modal-body -->
+                    </div><!-- /modal-content -->
+                  </div><!-- /modal-dialog -->
+                </div><!-- /modal -->
+              </div><!-- /actions-wrapper -->
 
-            <!-- Badge Topics -->
-            <aside class="badges-wrapper badges-main">
-              <h2 class="h4">Argomenti</h2>
-              <div class="badges">
-                {% for topic in page.topics %}
-                <a href="#" class="badge badge-sm badge-pill badge-outline-greendark">{{ topic }}</a>
-                {% endfor %}
-              </div>
-            </aside>
-
-            <!-- People -->
             <div class="cards-aside mt-4">
-              <h2 class="h4">Le persone</h2>
+              <h2 class="h4">Persone Correlate</h2>
               {% for person in page.people %}
               <div class="card card-avatar card-comments">
                 <a href="#">
@@ -119,7 +145,7 @@ layout: default
                     </div>
                     <div class="card-avatar-content">
                       <p class="font-weight-normal"><strong>{{ person.name }}</strong></p>
-                      <small>{{ person.role }}</small>
+                      <small>Amministratore</small>
                     </div>
                   </div>
                 </a>
@@ -127,27 +153,44 @@ layout: default
               {% endfor %}
             </div>
 
-            <!-- Places -->
-            <div class="cards-aside mt-4">
-              <h2 class="h4">Luoghi</h2>
-              {% for place in page.places %}
-              <div class="card card-icon-main">
-                <a href="#">
-                  <div class="card-body p-0">
-                    <svg class="icon" width="100%" height="100%"><!-- SVG placeholder --></svg>
-                    <div class="card-icon-content">
-                      <p><strong>{{ place }}</strong></p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              {% endfor %}
-            </div>
 
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
+              <div class="cards-aside mt-4">
+                <h2 class="h4">Luoghi</h2>
+                <div class="card card-icon-main">
+                  <a href="/distretto/gj/">
+                    <div class="card-body p-0">
+                      <svg class="icon" width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                        <g>
+                          <path d="M99.219,68.716l-9.745,-6.497l0,-18.359c0,-0.97 -0.786,-1.755 -1.755,-1.755l-7.017,0l0,-7.017c0,-0.97 -0.786,-1.755 -1.755,-1.755l-14.132,0c-0.796,-7.578 -6.677,-13.537 -13.938,-13.988l0,-3.556l10.527,0c0.968,0 1.754,-0.784 1.754,-1.754l0,-8.772c0,-0.97 -0.786,-1.754 -1.754,-1.754l-10.527,0l-1.754,0l-1.755,0l0,16.051c-6.436,1.22 -11.452,6.815 -12.183,13.773l-14.132,0c-0.969,0 -1.755,0.785 -1.755,1.755l0,7.017l-7.017,0c-0.969,0 -1.755,0.785 -1.755,1.755l0,18.359l-9.745,6.497c-0.488,0.325 -0.781,0.874 -0.781,1.459l0,24.562c0,0.97 0.786,1.754 1.754,1.754l96.492,0c0.968,0 1.754,-0.784 1.754,-1.754l0,-24.562c0,-0.585 -0.293,-1.134 -0.781,-1.459Z" style="fill:$greendark;fill-rule:nonzero;"></path>
+                          <rect x="50.877" y="7.018" width="8.772" height="5.263" style="fill:#c8edc3;"></rect>
+                          <path d="M50,22.807c5.733,0 10.479,4.586 11.273,10.526l-22.546,0c0.794,-5.94 5.54,-10.526 11.273,-10.526Z" style="fill:#fff;fill-rule:nonzero;"></path>
+                          <rect x="22.807" y="36.842" width="54.386" height="5.263" style="fill:#c8edc3;"></rect>
+                          <path d="M3.509,71.114l7.017,-4.679l0,26.547l-7.017,0l0,-21.868Z" style="fill:#c8edc3;fill-rule:nonzero;"></path>
+                          <path d="M14.035,63.158l0,-17.544l71.93,0l0,47.368l-7.018,0l0,-24.561c0,-0.97 -0.785,-1.754 -1.754,-1.754l-7.018,0c-0.968,0 -1.754,0.784 -1.754,1.754l0,24.561l-5.263,0l0,-24.561c0,-0.97 -0.786,-1.754 -1.754,-1.754l-7.018,0c-0.969,0 -1.754,0.784 -1.754,1.754l0,24.561l-5.264,0l0,-24.561c0,-0.97 -0.785,-1.754 -1.754,-1.754l-7.018,0c-0.968,0 -1.754,0.784 -1.754,1.754l0,24.561l-5.263,0l0,-24.561c0,-0.97 -0.786,-1.754 -1.754,-1.754l-7.018,0c-0.969,0 -1.754,0.784 -1.754,1.754l0,24.561l-7.018,0l0,-29.824Z" style="fill:#fff;fill-rule:nonzero;"></path>
+                          <rect x="24.561" y="70.175" width="3.509" height="22.807" style="fill:#c8edc3;"></rect>
+                          <rect x="40.351" y="70.175" width="3.509" height="22.807" style="fill:#c8edc3;"></rect>
+                          <rect x="56.14" y="70.175" width="3.509" height="22.807" style="fill:#c8edc3;"></rect>
+                          <rect x="71.93" y="70.175" width="3.509" height="22.807" style="fill:#c8edc3;"></rect>
+                          <path d="M96.491,92.982l-7.017,0l0,-26.547l7.017,4.679l0,21.868Z" style="fill:#c8edc3;fill-rule:nonzero;"></path>
+                          <path d="M22.807,61.404l7.018,0c0.968,0 1.754,-0.785 1.754,-1.755l0,-7.017c0,-0.97 -0.786,-1.755 -1.754,-1.755l-7.018,0c-0.969,0 -1.754,0.785 -1.754,1.755l0,7.017c0,0.97 0.785,1.755 1.754,1.755Z" style="fill:$greendark;fill-rule:nonzero;"></path>
+                          <path d="M38.596,61.404l7.018,0c0.969,0 1.754,-0.785 1.754,-1.755l0,-7.017c0,-0.97 -0.785,-1.755 -1.754,-1.755l-7.018,0c-0.968,0 -1.754,0.785 -1.754,1.755l0,7.017c0,0.97 0.786,1.755 1.754,1.755Z" style="fill:$greendark;fill-rule:nonzero;"></path>
+                          <path d="M54.386,61.404l7.018,0c0.968,0 1.754,-0.785 1.754,-1.755l0,-7.017c0,-0.97 -0.786,-1.755 -1.754,-1.755l-7.018,0c-0.969,0 -1.754,0.785 -1.754,1.755l0,7.017c0,0.97 0.785,1.755 1.754,1.755Z" style="fill:$greendark;fill-rule:nonzero;"></path>
+                          <path d="M70.175,61.404l7.018,0c0.969,0 1.754,-0.785 1.754,-1.755l0,-7.017c0,-0.97 -0.785,-1.755 -1.754,-1.755l-7.018,0c-0.968,0 -1.754,0.785 -1.754,1.755l0,7.017c0,0.97 0.786,1.755 1.754,1.755Z" style="fill:$greendark;fill-rule:nonzero;"></path>
+                          <rect x="24.561" y="54.386" width="3.509" height="3.509" style="fill:#c8edc3;"></rect>
+                          <rect x="40.351" y="54.386" width="3.509" height="3.509" style="fill:#c8edc3;"></rect>
+                          <rect x="56.14" y="54.386" width="3.509" height="3.509" style="fill:#c8edc3;"></rect>
+                          <rect x="71.93" y="54.386" width="3.509" height="3.509" style="fill:#c8edc3;"></rect>
+                        </g>
+                      </svg>
+                      <div class="card-icon-content">
+                        <p><strong>Distretto GJ</strong></p>
+                      </div><!-- /card-icon-content -->
+                    </div><!-- /card-body -->
+                  </a>
+                </div><!-- /card card-bg card-icon-main rounded -->
+              </div><!-- /cards-avatar -->
+            </div><!-- /col-lg-3 -->
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </section>
+    </main>
