@@ -1,0 +1,217 @@
+<main id="main-container" class="main-container greendark">
+
+      <section class="section py-2 bg-white d-none d-sm-block">
+        <div class="container">
+          <div class="row variable-gutters">
+            <div class="col-12">
+              <div class="breadcrumb">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumbs-list" data-element="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/" title="Vai alla pagina: Home">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/foia/" title="Vai alla pagina: FOIA">FOIA</a></li>
+                    <li class="breadcrumb-item"><a href="/foia/documenti/" title="Vai alla pagina: Documenti">Documenti</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><span>{{ page.title }}</span></li>
+                  </ol>
+                </nav>
+              </div><!-- /breadcrumbs -->
+            </div><!-- /col-12 -->
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </section><!-- /section -->
+
+
+      <section class="section bg-white py-2 py-lg-3 py-xl-5">
+        <div class="container">
+          <div class="row variable-gutters">
+            <div class="col-12 col-sm-3 col-lg-2 d-none d-sm-block">
+              <div class="section-thumb mx-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRZTgMW0x0W6rNqx-umL6W5e5dddtO3R_h7g&s" alt="">
+              </div><!-- /section-thumb -->
+            </div><!-- /col-lg-2 -->
+            <div class="col-12 col-sm-9 col-lg-5 col-md-8">
+              <small class="h6 text-greendark">Trasparenza Jonez</small>
+              <div class="section-title">
+                <h1 class="h2 mb-3">{{ page.title }}</h1>
+                <div class="h4 text-greendark mb-3">Documento Pubblico</div>
+                <p>{{ page.date }} - {{ page.title }}</p>
+              </div><!-- /title-section -->
+            </div><!-- /col-lg-5 col-md-8 -->
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+              <div class="card card-avatar card-comments mt-3">
+                <div class="card-body p-0">
+                  <div class="card-avatar-img">
+                    <img src="{{ page.title }}" alt="Immagine profilo">
+                  </div><!-- /card-avatar-img -->
+                  <div class="card-avatar-content">
+                    <p class="font-weight-normal">da <strong class="text-underline"><u>Manuel Bernardi</u></strong></p>
+                    <small>Amministratore siti GJWS</small>
+                  </div><!-- /card-avatar-content -->
+                </div><!-- /card-body -->
+              </div><!-- /card card-avatar -->
+            </div><!-- /col-lg-3 col-md-4 offset-lg-1 -->
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </section><!-- /section -->
+
+      <section class="section bg-white">
+        <div class="container container-border-top pt-4">
+          <div class="row variable-gutters justify-content-center">
+
+            <div class="col-lg-9 col-md-8 order-lg-1">
+              <article class="article-wrapper pt-4">
+                <div class="row variable-gutters">
+                  <div class="col-lg-8 wysiwig-text">
+                    <p>{{ page.title }}</p>
+                  </div>
+                </div>
+                <h2 class="h4 mb-4">Documenti</h2>
+                <div class="row variable-gutters">
+                  <div class="col-lg-12">
+                    <div class="card-deck card-deck-spaced">
+                      <div class="card card-bg card-icon rounded">
+                        <div class="card-body">
+                          <svg class="icon it-pdf-document">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-news"></use>
+                          </svg>
+                          <div class="card-icon-content">
+                            <p><strong><a href="/{{ page.documento }}/">{{ page.nomedocumento }}</a></strong></p>
+                            <small>Documento reso pubblico dall'amministrazione Jonez, per garantire la trasparenza.</small>
+
+                          </div><!-- /card-icon-content -->
+                        </div><!-- /card-body -->
+                      </div><!-- /card card-bg card-icon rounded -->
+                    </div><!-- /card-deck card-deck-spaced -->
+                  </div><!-- /col-lg-12 -->
+                </div><!-- /row -->
+                <div class="col-12">
+                  <a href="#" role="button" class="btn btn-greendark">Presa Visione</a>
+                </div>
+
+
+                <div class="row variable-gutters">
+                  <div class="col-lg-12">
+                    <div class="article-footer">
+                      <p><strong>Pubblicato:</strong> {{ page.date }} <span>-</span> <strong>Revisione:</strong> {{ page.date }}
+                      </p>
+                      <p>Eccetto dove diversamente specificato, questo articolo è stato rilasciato sotto Licenza
+                        Creative Commons Attribuzione 4.0 Italia.</p>
+                    </div><!-- /article-footer -->
+
+                  </div><!-- /col-lg-9 -->
+                </div><!-- /row -->
+              </article>
+            </div>
+            <div class="col-lg-3 col-md-4 order-lg-0">
+              <div class="actions-wrapper actions-main">
+                <a class="toggle-actions" href="#" title="Vedi azioni" data-target="#modal-more-items" data-toggle="modal">
+                  <svg class="it-more-items">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-more-items"></use>
+                  </svg>
+                  <span>Stampa / Condividi</span>
+                </a>
+                <div class="modal fade modal-actions" id="modal-more-items" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <!--
+                    <li>
+                      <a href="#" class="list-item left-icon" title="Scarica il contenuto">
+                        <svg class="icon it-download"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-download"></use></svg>
+                        <span>Scarica</span>
+                      </a>
+                    </li>
+                    //-->
+                            <li>
+                              <a href="#" class="list-item left-icon" title="Genera PDF">
+                                <svg class="icon it-pdf">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-pdf-document"></use>
+                                </svg>
+                                <span>Genera PDF</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="javascript:window.print();" class="list-item left-icon" title="Stampa il contenuto">
+                                <svg class="icon it-print">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-print"></use>
+                                </svg>
+                                <span>Stampa</span>
+                              </a>
+                            </li>
+                            <!--
+                    <li>
+                      <a href="#" class="list-item left-icon" title="Ascolta il contenuto">
+                        <svg class="icon it-hearing"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-hearing"></use></svg>
+                        <span>Ascolta</span>
+                      </a>
+                    </li>
+                    //-->
+                            <li>
+                              <a href="#" class="list-item left-icon" title="Invia il contenuto">
+                                <svg class="icon it-email">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-email"></use>
+                                </svg>
+                                <span>Invia</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item collapsed link-toggle" title="Condividi" href="#social-share" data-toggle="collapse" aria-expanded="false" aria-controls="social-share">
+                                <svg class="icon it-share">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-share"></use>
+                                </svg>
+                                <span>Condividi</span>
+                                <svg class="icon icon-toggle svg-arrow-down-small">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-down-small">
+                                  </use>
+                                </svg>
+                              </a>
+                              <ul class="link-sublist collapse" id="social-share">
+                                <li>
+                                  <a class="list-item" href="#" title="Condividi su: Facebook" target="_blank">
+                                    <svg class="icon it-social-facebook">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-social-facebook">
+                                      </use>
+                                    </svg>
+                                    <span>Facebook</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="list-item" href="#" title="Condividi su: Twitter" target="_blank">
+                                    <svg class="icon it-social-twitter">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-social-twitter">
+                                      </use>
+                                    </svg>
+                                    <span>Twitter</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="list-item" href="#" title="Condividi su: Linkedin" target="_blank">
+                                    <svg class="icon it-social-linkedin">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-social-linkedin">
+                                      </use>
+                                    </svg>
+                                    <span>Linkedin</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div><!-- /modal-body -->
+                    </div><!-- /modal-content -->
+                  </div><!-- /modal-dialog -->
+                </div><!-- /modal -->
+              </div><!-- /actions-wrapper -->
+              <aside class="badges-wrapper badges-main">
+                <div class="h4">Argomenti</div>
+                <div class="badges">
+                  <a href="/foia/" data-element="topic-list" class="badge badge-sm badge-pill badge-outline-greendark">FOIA</a>
+                </div><!-- /badges -->
+              </aside><!-- /badges-wrapper -->
+            </div>
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </section>
+
+    </main>
