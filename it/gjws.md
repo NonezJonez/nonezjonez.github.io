@@ -1,10 +1,10 @@
 ---
 layout: argomental
-title: Dipartimento gjws
+title: Distretto gjws
 description: 
 lang: it
 ref: homepage
-permalink: /dipartimenti/gjws/
+permalink: /Distretti/gjws/
 order: 1
 argomento: gjws
 ---

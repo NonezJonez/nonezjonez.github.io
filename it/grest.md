@@ -2,5 +2,5 @@
 title: "Grest"
 layout: page
 argomento: edu
-permalink: /dipartimento-educazione/grest/
+permalink: /Distretto-educazione/grest/
 ---

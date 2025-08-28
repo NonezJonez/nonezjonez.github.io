@@ -1,10 +1,10 @@
 ---
 layout: argomental
-title: Dipartimento Dirigenziale
-description: Dipartimento Dirigenziale
+title: Distretto Dirigenziale
+description: Distretto Dirigenziale
 lang: it
 ref: homepage
-permalink: /dipartimenti/dirigenziale/
+permalink: /distretti/dirigenziale/
 order: 1
 argomento: dirigenza
 ---
