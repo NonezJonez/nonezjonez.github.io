@@ -11,6 +11,7 @@ La storia LGBTQ+ è fatta di coraggio, resilienza e battaglie per l’uguaglianz
 
 Alcuni momenti chiave:
 
+
 * **1969 – Rivolta di Stonewall (New York):** considerata l’inizio del movimento moderno per i diritti LGBTQ+. Dopo le proteste contro le retate della polizia, nacquero i primi Pride.
 * **1970 – Primo Gay Pride:** a New York e in altre città degli Stati Uniti, per commemorare Stonewall e chiedere diritti civili.
 * **Anni ‘80 e ‘90 – Epidemia di HIV/AIDS:** la comunità LGBTQ+ si è unita per sostenere chi era colpito e combattere lo stigma sociale.

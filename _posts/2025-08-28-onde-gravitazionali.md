@@ -52,8 +52,3 @@ Osservare le onde gravitazionali prodotte dai buchi neri potrebbe anche dirci qu
 
 - [Modalità di iscrizione](/assets/docs/modalita_iscrizione.pdf) (255 kb)  
 - [Modalità di pagamento](/assets/docs/modalita_pagamento.pdf) (300 kb)
-
----
-**Pubblicato:** 12.02.2022 — **Revisione:** 15.04.2022  
-
-Eccetto dove diversamente specificato, questo articolo è stato rilasciato sotto Licenza Creative Commons Attribuzione 4.0 Italia.
